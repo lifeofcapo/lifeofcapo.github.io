@@ -85,6 +85,20 @@
     input[type="number"] {
     -moz-appearance: textfield; /* для Firefox */
     }
+
+      @media (max-width: 768px) {
+    #heroSection .flex.flex-wrap.gap-4.pt-4 {
+      flex-wrap: nowrap;              /* в один ряд */
+      justify-content: center;        /* выравнивание */
+      gap: 8px;                       /* чуть меньше расстояние */
+    }
+
+    #heroSection .flex.flex-wrap.gap-4.pt-4 a {
+      transform: scale(0.9);          /* уменьшить на 10% */
+      flex: 1;                        /* чтобы они равномерно занимали ширину */
+      text-align: center;
+    }
+  }
   </style>
 </head>
 <body id="body" class="transition-theme bg-gray-950 text-gray-100 min-h-screen">
