@@ -4,6 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Опер касса — обмен валют</title>
+
+  <link rel="icon" type="image/x-icon" href="./images/icons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/icons/favicon-16x16.png">
+  
+  <!-- Для Apple устройств -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/icons/apple-touch-icon.png">
+  
+  <!-- Для Android -->
+  <link rel="icon" type="image/png" sizes="192x192" href="./images/icons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="./images/icons/android-chrome-512x512.png">
+  
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="./images/icons/site.webmanifest">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -49,19 +64,19 @@
       opacity: 0;
       transition: opacity 0.3s ease;
     }
-.modal.show {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 1;
-}
+    .modal.show {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+    }
     .modal-content {
-    margin: auto;
-    transform: scale(0.8);
-    transition: transform 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+      margin: auto;
+      transform: scale(0.8);
+      transition: transform 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .modal.show .modal-content {
       transform: scale(1);
@@ -78,32 +93,28 @@
     }
     input[type="number"]::-webkit-outer-spin-button,
     input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+      -webkit-appearance: none;
+      margin: 0;
     }
-
     input[type="number"] {
-    -moz-appearance: textfield; /* для Firefox */
+      -moz-appearance: textfield;
     }
-
-      @media (max-width: 768px) {
-    #heroSection .flex.flex-wrap.gap-4.pt-4 {
-      flex-wrap: nowrap;              
-      justify-content: center;        
-      gap: 8px;                      
+    @media (max-width: 768px) {
+      #heroSection .flex.flex-wrap.gap-4.pt-4 {
+        flex-wrap: nowrap;              
+        justify-content: center;        
+        gap: 8px;                      
+      }
+      #heroSection .flex.flex-wrap.gap-4.pt-4 a {
+        transform: scale(0.9);          
+        flex: 1;                        
+        text-align: center;
+      }
     }
-
-    #heroSection .flex.flex-wrap.gap-4.pt-4 a {
-      transform: scale(0.9);          /* уменьшить на 10% */
-      flex: 1;                        /* чтобы они равномерно занимали ширину */
-      text-align: center;
-    }
-  }
   </style>
 </head>
 <body id="body" class="transition-theme bg-gray-950 text-gray-100 min-h-screen">
 
-  <!-- Navigation Bar -->
   <nav class="py-4 px-6 border-b border-gray-800 transition-theme sticky top-0 z-50 backdrop-blur-md bg-gray-950/90" id="navbar">
     <div class="container mx-auto flex justify-between items-center">
       <h1 class="text-2xl font-bold text-teal-400 cursor-pointer" onclick="scrollToTop()">Опер-касса.рф</h1>
@@ -114,7 +125,6 @@
         <a href="#contact" class="text-sm hover:text-teal-400 transition hidden md:block">Контакты</a>
         <a href="#reviews" class="text-sm hover:text-teal-400 transition hidden md:block">Отзывы</a>
         
-        <!-- Theme Toggle -->
         <label class="inline-flex items-center cursor-pointer">
           <input id="themeToggle" type="checkbox" class="hidden">
           <div class="relative">
@@ -131,11 +141,9 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <section class="hero-gradient relative overflow-hidden py-20 transition-theme" id="heroSection">
     <div class="container mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-12 items-center">
-        <!-- Text Content -->
         <div class="space-y-6 z-10">
           <div class="inline-block px-4 py-2 bg-teal-500/20 rounded-full border border-teal-500/30">
             <span class="text-teal-400 font-semibold">⚡ Работаем 24/7</span>
@@ -156,7 +164,6 @@
             </a>
           </div>
 
-          <!-- Features -->
           <div class="grid grid-cols-2 gap-4 pt-6">
             <div class="flex items-center gap-3">
               <div class="w-12 h-12 bg-teal-500/20 rounded-lg flex items-center justify-center">
@@ -179,7 +186,6 @@
           </div>
         </div>
 
-        <!-- Image -->
         <div class="relative">
           <div class="float-animation">
             <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&h=600&fit=crop" 
@@ -187,7 +193,6 @@
                  class="rounded-3xl shadow-2xl w-full object-cover"
                  style="max-height: 500px;">
           </div>
-          <!-- Decorative elements -->
           <div class="absolute -top-10 -right-10 w-40 h-40 bg-teal-500/20 rounded-full blur-3xl"></div>
           <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-teal-500/20 rounded-full blur-3xl"></div>
         </div>
@@ -195,7 +200,6 @@
     </div>
   </section>
 
-  <!-- Stats Counter Section -->
   <section class="py-12 transition-theme bg-gray-900/50" id="statsSection">
     <div class="container mx-auto px-6">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -218,7 +222,7 @@
       </div>
     </div>
   </section>
-  <!-- Calculator Section -->
+
   <section class="py-16 transition-theme" id="calculator">
     <div class="container mx-auto px-6">
       <div class="text-center mb-12">
@@ -268,22 +272,19 @@
     </div>
   </section>
 
-  <!-- Currency Section -->
   <section class="py-16 transition-theme" id="currency">
     <div class="container mx-auto px-6">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">Актуальные курсы валют</h2>
-        <p class="text-gray-400 text-lg">Для сумм до 5 000 у.е. • Обновляется ежедневно</p>
+        <p class="text-gray-400 text-lg">Для сумм до 5 000 у.е. Обновляется ежедневно</p>
         <p class="text-sm text-gray-500 mt-2">Для обмена больших сумм звоните — курс будет выгоднее</p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto" id="currencyGrid">
-        <!-- здесь карты подгружаются -->
       </div>
     </div>
   </section>
 
-  <!-- Quick Order Modal -->
   <div id="quickOrderModal" class="modal">
     <div class="modal-content max-w-md w-full mx-4">
       <div class="glass-effect rounded-3xl p-8 border border-gray-800">
@@ -301,13 +302,10 @@
         <button onclick="submitOrder()" class="w-full bg-teal-500 hover:bg-teal-400 text-black font-bold py-4 rounded-xl transition mb-3">
           Отправить заявку
         </button>
-        
-        <p class="text-xs text-center text-gray-500">Или позвоните нам напрямую: <a href="tel:+79616269999" class="text-teal-400 hover:underline">+7 (961) 626-99-99</a></p>
       </div>
     </div>
   </div>
 
-  <!-- Contact Section -->
   <section class="py-16 transition-theme" id="contact">
     <div class="container mx-auto px-6">
       <div class="glass-effect rounded-3xl p-8 md:p-12 border border-gray-800 transition-theme" id="contactCard">
@@ -346,112 +344,139 @@
               </div>
             </div>
           </div>
-                    <!-- Map -->
-          <div class="rounded-2xl overflow-hidden shadow-2xl border border-gray-700">
-            <iframe 
-              src="https://yandex.ru/map-widget/v1/?um=constructor:d1ee44fc04b9525115db7ea78f6ca154cffff81100c43f56e4094a7f7d1a0e8c&source=constructor"
-              width="100%"
-              height="400"
-              frameborder="0"
-              allowfullscreen="true">
-            </iframe>
+          <!-- MAP -->
+          <div class="rounded-2xl overflow-hidden shadow-2xl border border-gray-700"> <iframe src="https://yandex.ru/map-widget/v1/?um=constructor:d1ee44fc04b9525115db7ea78f6ca154cffff81100c43f56e4094a7f7d1a0e8c&source=constructor" width="100%" height="400" frameborder="0" allowfullscreen="true"> </iframe> </div>
+              </div>
+            </div>
           </div>
+  </section>
+
+  <section id="reviews" class="py-16 transition-theme">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">
+        Отзывы клиентов
+      </h2>
+
+      <div class="text-center mb-8">
+        <div class="text-5xl font-extrabold text-yellow-400 mb-2">5.0</div>
+        <div class="text-gray-400">на основе 105 оценок</div>
+        <div class="flex justify-center mt-2 text-yellow-400 text-xl">
+          ★★★★★
         </div>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-2">
+        
+        <div class="review-card p-6 bg-gray-900/60 border border-gray-700 rounded-2xl shadow-2xl transition-theme">
+          <div class="flex items-center gap-4 mb-3">
+            <img src="https://avatars.mds.yandex.net/get-yapic/0/0-0/islands-retina-50" alt="avatar" class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <div class="font-semibold review-name">Даня Рогачёв</div>
+              <div class="text-sm text-gray-400">22 июня</div>
+            </div>
+          </div>
+          <div class="text-yellow-400 mb-2">★★★★★</div>
+          <p class="review-text text-gray-300">
+            Решил сразу обменять деньги перед отдыхом, персонал любезный и быстренько все сделал и что самое главное курс вообще топ. Всем рекомендую
+          </p>
+        </div>
+
+        <div class="review-card p-6 bg-gray-900/60 border border-gray-700 rounded-2xl shadow-2xl transition-theme">
+          <div class="flex items-center gap-4 mb-3">
+            <img src="https://avatars.mds.yandex.net/get-yapic/0/0-0/islands-retina-50" alt="avatar" class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <div class="font-semibold review-name">Анастасия Блинникова</div>
+              <div class="text-sm text-gray-400">15 июня</div>
+            </div>
+          </div>
+          <div class="text-yellow-400 mb-2">★★★★★</div>
+          <p class="review-text text-gray-300">
+            Отличный обменник, быстрый сервис и мягкий персонал. Найти легко, просто зайдите в цветочный магазин. Советую.
+          </p>
+        </div>
+
+        <div class="review-card p-6 bg-gray-900/60 border border-gray-700 rounded-2xl shadow-2xl transition-theme">
+          <div class="flex items-center gap-4 mb-3">
+            <img src="https://avatars.mds.yandex.net/get-yapic/0/0-0/islands-retina-50" alt="avatar" class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <div class="font-semibold review-name">Матвей Шалагин</div>
+              <div class="text-sm text-gray-400">28 марта</div>
+            </div>
+          </div>
+          <div class="text-yellow-400 mb-2">★★★★★</div>
+          <p class="review-text text-gray-300">
+            Данное место очень понравилось. Обслуживание быстрое и качественное. Курс валют полностью устроил. Обязательно буду заходить сюда и не раз!
+          </p>
+        </div>
+
+        <div class="review-card p-6 bg-gray-900/60 border border-gray-700 rounded-2xl shadow-2xl transition-theme">
+          <div class="flex items-center gap-4 mb-3">
+            <img src="https://avatars.mds.yandex.net/get-yapic/0/0-0/islands-retina-50" alt="avatar" class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <div class="font-semibold review-name">Дима Прока</div>
+              <div class="text-sm text-gray-400">27 марта</div>
+            </div>
+          </div>
+          <div class="text-yellow-400 mb-2">★★★★★</div>
+          <p class="review-text text-gray-300">
+            Лучший курс! Лучшее расположение! Лучший сервис. Без преувеличения один из лучших обменников в которых я бываю. Конечно расположение может несколько смутить, но так даже удобнее
+          </p>
+        </div>
+
+        <div class="review-card p-6 bg-gray-900/60 border border-gray-700 rounded-2xl shadow-2xl transition-theme">
+          <div class="flex items-center gap-4 mb-3">
+            <img src="https://avatars.mds.yandex.net/get-yapic/0/0-0/islands-retina-50" alt="avatar" class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <div class="font-semibold review-name">викА</div>
+              <div class="text-sm text-gray-400">7 октября</div>
+            </div>
+          </div>
+          <div class="text-yellow-400 mb-2">★★★★★</div>
+          <p class="review-text text-gray-300">
+            посетила этот пункт, мне очень все понравилось, быстро обслужили, вежливые кассиры, буду обращаться еще, спасибо большое
+          </p>
+        </div>
+
+        <div class="review-card p-6 bg-gray-900/60 border border-gray-700 rounded-2xl shadow-2xl transition-theme">
+          <div class="flex items-center gap-4 mb-3">
+            <img src="https://avatars.mds.yandex.net/get-yapic/0/0-0/islands-retina-50" alt="avatar" class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <div class="font-semibold review-name">Николай макаров</div>
+              <div class="text-sm text-gray-400">23 апреля</div>
+            </div>
+          </div>
+          <div class="text-yellow-400 mb-2">★★★★★</div>
+          <p class="review-text text-gray-300">
+            Отличный персонал, быстро и качественно обменяли валюту. Советую всем. Чистое место, курс валют хороший останетесь в +
+          </p>
+        </div>
+
+        <div class="review-card p-6 bg-gray-900/60 border border-gray-700 rounded-2xl shadow-2xl transition-theme">
+          <div class="flex items-center gap-4 mb-3">
+            <img src="https://avatars.mds.yandex.net/get-yapic/0/0-0/islands-retina-50" alt="avatar" class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <div class="font-semibold review-name">Lyu@125</div>
+              <div class="text-sm text-gray-400">19 мая</div>
+            </div>
+          </div>
+          <div class="text-yellow-400 mb-2">★★★★★</div>
+          <p class="review-text text-gray-300">
+            Операционная касса супер, выгодный курс, вежливый персонал который поможет во всем, все на самом высоком уровне
+          </p>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="https://yandex.ru/profile/140760261276?intent=reviews"
+           target="_blank"
+           class="inline-block px-8 py-4 bg-teal-500 hover:bg-teal-400 text-black font-semibold rounded-xl shadow-lg transition">
+           Читать все отзывы на Яндекс.Картах
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Reviews Section -->
-<section id="reviews" class="py-16">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-10 text-white">
-      Отзывы клиентов
-    </h2>
-
-    <!-- Overall rating -->
-    <div class="text-center mb-8">
-      <div class="text-5xl font-extrabold text-yellow-400 mb-2">5.0</div>
-      <div class="text-gray-300">на основе 105 оценок</div>
-      <div class="flex justify-center mt-2 text-yellow-400 text-xl">
-        ★★★★★
-      </div>
-    </div>
-
-    <!-- Reviews grid -->
-    <div class="grid gap-8 md:grid-cols-2">
-      
-      <!-- Review 1 -->
-      <div class="p-6 bg-gray-900/60 border border-gray-700 rounded-2xl shadow-2xl">
-        <div class="flex items-center gap-4 mb-3">
-          <img src="https://avatars.mds.yandex.net/get-yapic/0/0-0/islands-retina-50" alt="avatar" class="w-12 h-12 rounded-full object-cover">
-          <div>
-            <div class="font-semibold text-white">Пётр Панасенко</div>
-            <div class="text-sm text-gray-400">6 марта 2025</div>
-          </div>
-        </div>
-        <div class="text-yellow-400 mb-2">★★★★★</div>
-        <p class="text-gray-300">
-          На постоянной основе обращаюсь сюда для оплаты инвойсов в США, сотрудники порядочные, всегда на связи, отличное соотношение % комиссии/скорость поступления денег. Однозначно рекомендую.
-        </p>
-      </div>
-
-      <!-- Review 2 -->
-      <div class="p-6 bg-gray-900/60 border border-gray-700 rounded-2xl shadow-2xl">
-        <div class="flex items-center gap-4 mb-3">
-          <img src="https://avatars.mds.yandex.net/get-yapic/0/0-0/islands-retina-50" alt="avatar" class="w-12 h-12 rounded-full object-cover">
-          <div>
-            <div class="font-semibold text-white">Кирилл Тюрин</div>
-            <div class="text-sm text-gray-400">1 марта 2025</div>
-          </div>
-        </div>
-        <div class="text-yellow-400 mb-2">★★★★★</div>
-        <p class="text-gray-300">
-          Работящий, удобный и понятный сервис. Приветливые сотрудники, выгодный курс и быстрое обслуживание. В выходные на парковке перед офисом свободно — удобно.
-        </p>
-      </div>
-
-      <!-- Review 3 -->
-      <div class="p-6 bg-gray-900/60 border border-gray-700 rounded-2xl shadow-2xl">
-        <div class="flex items-center gap-4 mb-3">
-          <img src="https://avatars.mds.yandex.net/get-yapic/0/0-0/islands-retina-50" alt="avatar" class="w-12 h-12 rounded-full object-cover">
-          <div>
-            <div class="font-semibold text-white">Мария Коновалова</div>
-            <div class="text-sm text-gray-400">18 февраля 2025</div>
-          </div>
-        </div>
-        <div class="text-yellow-400 mb-2">★★★★★</div>
-        <p class="text-gray-300">
-          Очень приятные сотрудники, всё быстро и чётко. Курс лучший в районе Савёловской, обязательно вернусь ещё.
-        </p>
-      </div>
-
-      <!-- Review 4 -->
-      <div class="p-6 bg-gray-900/60 border border-gray-700 rounded-2xl shadow-2xl">
-        <div class="flex items-center gap-4 mb-3">
-          <img src="https://avatars.mds.yandex.net/get-yapic/0/0-0/islands-retina-50" alt="avatar" class="w-12 h-12 rounded-full object-cover">
-          <div>
-            <div class="font-semibold text-white">Алексей Смирнов</div>
-            <div class="text-sm text-gray-400">10 февраля 2025</div>
-          </div>
-        </div>
-        <div class="text-yellow-400 mb-2">★★★★★</div>
-        <p class="text-gray-300">
-          Безопасно и профессионально. Проверяли купюры на месте, всё честно и быстро. Спасибо за хорошее обслуживание!
-        </p>
-      </div>
-
-    </div>
-
-    <!-- Button -->
-    <div class="text-center mt-12">
-      <a href="https://yandex.ru/profile/140760261276?intent=reviews"
-         target="_blank"
-         class="inline-block px-8 py-4 bg-teal-500 hover:bg-teal-400 text-black font-semibold rounded-xl shadow-lg transition">
-         Читать все отзывы на Яндекс.Картах
-      </a>
-    </div>
-  </div>
-</section>
   <footer class="py-8 border-t border-gray-800 transition-theme" id="footer">
     <div class="container mx-auto px-6 text-center text-gray-500">
       <p class="mb-2">© 2025 Опер-касса.рф — Обмен валют в Москве</p>
@@ -459,43 +484,63 @@
   </footer>
 
   <script>
-    const currencies = [ //курс
-      { code: 'USD', flag: 'us', name: 'Доллар США', buy: 95.5, sell: 97.8 },
-      { code: 'EUR', flag: 'eu', name: 'Евро', buy: 105.2, sell: 107.9 },
-      { code: 'GBP', flag: 'gb', name: 'Фунт стерлингов', buy: 122.5, sell: 125.3 },
-      { code: 'CNY', flag: 'cn', name: 'Китайский юань', buy: 13.2, sell: 13.8 },
-      { code: 'RUB', flag: 'ru', name: 'Российский рубль', buy: 1, sell: 1 }
+    const currencies = [
+      { code: 'USD_WHITE', flag: 'us', name: 'Доллар США (белый)', buy: 95.5, sell: 97.8, showRates: true },
+      { code: 'USD_BLUE', flag: 'us', name: 'Доллар США (синий)', buy: 94.0, sell: 96.5, showRates: true },
+      { code: 'EUR', flag: 'eu', name: 'Евро', buy: 105.2, sell: 107.9, showRates: true },
+      { code: 'GBP', flag: 'gb', name: 'Фунт стерлингов', buy: 0, sell: 0, showRates: false },
+      { code: 'CNY', flag: 'cn', name: 'Китайский юань', buy: 0, sell: 0, showRates: false },
+      { code: 'RUB', flag: 'ru', name: 'Российский рубль', buy: 1, sell: 1, showRates: true }
     ];
 
-    // Render currency cards
     const grid = document.getElementById('currencyGrid');
-    currencies.filter(c => c.code !== 'RUB').forEach(({ code, flag, name, buy, sell }) => {
+    currencies.filter(c => c.code !== 'RUB').forEach(({ code, flag, name, buy, sell, showRates }) => {
       const card = document.createElement('div');
       card.className = 'currency-card bg-gray-900 rounded-2xl p-6 shadow-xl border border-gray-800 hover:border-teal-400 transition-all hover:scale-105 cursor-pointer slide-in';
-      card.innerHTML = `
-        <div class="flex items-center justify-between mb-4">
-          <div class="flex items-center gap-3">
-            <img src="https://flagcdn.com/w40/${flag}.png" alt="${code}" class="w-10 h-8 rounded shadow-sm" />
-            <div>
-              <h3 class="text-2xl font-bold">${code}</h3>
-              <p class="text-xs text-gray-500">${name}</p>
+      
+      if (showRates) {
+        card.innerHTML = `
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <img src="https://flagcdn.com/w40/${flag}.png" alt="${code}" class="w-10 h-8 rounded shadow-sm" />
+              <div>
+                <h3 class="text-2xl font-bold">${name.includes('белый') ? 'USD' : name.includes('синий') ? 'USD' : code}</h3>
+                <p class="text-xs text-gray-500">${name}</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="space-y-3">
-          <div class="flex justify-between items-center">
-            <span class="text-gray-400">Покупка</span>
-            <span class="text-2xl font-bold text-green-400">${buy.toFixed(2)} ₽</span>
+          <div class="space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-gray-400">Покупка</span>
+              <span class="text-2xl font-bold text-green-400">${buy.toFixed(2)} ₽</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-gray-400">Продажа</span>
+              <span class="text-2xl font-bold text-red-400">${sell.toFixed(2)} ₽</span>
+            </div>
+          </div>`;
+      } else {
+        card.innerHTML = `
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <img src="https://flagcdn.com/w40/${flag}.png" alt="${code}" class="w-10 h-8 rounded shadow-sm" />
+              <div>
+                <h3 class="text-2xl font-bold">${code}</h3>
+                <p class="text-xs text-gray-500">${name}</p>
+              </div>
+            </div>
           </div>
-          <div class="flex justify-between items-center">
-            <span class="text-gray-400">Продажа</span>
-            <span class="text-2xl font-bold text-red-400">${sell.toFixed(2)} ₽</span>
-          </div>
-        </div>`;
+          <div class="space-y-3">
+            <div class="text-center py-4">
+              <p class="text-gray-400 mb-2">📞 Курс уточняйте по телефону</p>
+              <a href="tel:+79616269999" class="text-teal-400 hover:text-teal-300 font-semibold text-lg">+7 (961) 626-99-99</a>
+            </div>
+          </div>`;
+      }
+      
       grid.appendChild(card);
     });
 
-    // Counter animation
     function animateCounter(element) {
       const target = parseInt(element.getAttribute('data-target'));
       const duration = 2000;
@@ -513,7 +558,6 @@
       }, 16);
     }
 
-    // Intersection Observer for counter
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -526,7 +570,6 @@
 
     observer.observe(document.getElementById('statsSection'));
 
-    // Calculator
     const fromAmount = document.getElementById('fromAmount');
     const fromCurrency = document.getElementById('fromCurrency');
     const toCurrency = document.getElementById('toCurrency');
@@ -563,7 +606,6 @@
     toCurrency.addEventListener('change', calculateExchange);
     calculateExchange();
 
-    // Modal functions
     function openQuickOrder() {
       const modal = document.getElementById('quickOrderModal');
       modal.classList.add('show');
@@ -590,7 +632,6 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Theme toggle
     const toggle = document.getElementById('themeToggle');
     const toggleBg = document.getElementById('toggleBg');
     const toggleCircle = document.getElementById('toggleCircle');
@@ -607,76 +648,100 @@
       const cards = document.querySelectorAll('.currency-card');
       const statsSection = document.getElementById('statsSection');
 
-if (toggle.checked) {
-  // 🌞 Light Theme
-  toggleBg.classList.replace('bg-gray-700', 'bg-gray-300');
-  toggleCircle.style.transform = 'translateX(24px)';
-  darkLabel.classList.add('hidden');
-  lightLabel.classList.remove('hidden');
-  lightLabel.classList.add('text-teal-600', 'font-semibold');
+      if (toggle.checked) {
+        toggleBg.classList.replace('bg-gray-700', 'bg-gray-300');
+        toggleCircle.style.transform = 'translateX(24px)';
+        darkLabel.classList.add('hidden');
+        lightLabel.classList.remove('hidden');
+        lightLabel.classList.add('text-teal-600', 'font-semibold');
 
-  body.classList.replace('bg-gray-950', 'bg-gray-50');
-  body.classList.replace('text-gray-100', 'text-gray-900');
-  navbar.classList.replace('border-gray-800', 'border-gray-200');
-  navbar.classList.replace('bg-gray-950/90', 'bg-gray-50/90');
-  heroSection.classList.remove('hero-gradient');
-  heroSection.classList.add('hero-gradient-light');
-  footer.classList.replace('border-gray-800', 'border-gray-200');
+        body.classList.replace('bg-gray-950', 'bg-gray-50');
+        body.classList.replace('text-gray-100', 'text-gray-900');
+        navbar.classList.replace('border-gray-800', 'border-gray-200');
+        navbar.classList.replace('bg-gray-950/90', 'bg-gray-50/90');
+        heroSection.classList.remove('hero-gradient');
+        heroSection.classList.add('hero-gradient-light');
+        footer.classList.replace('border-gray-800', 'border-gray-200');
 
-  contactCard.classList.remove('glass-effect', 'border-gray-800');
-  contactCard.classList.add('glass-effect-light', 'border-gray-200');
-  calculatorCard.classList.remove('glass-effect', 'border-gray-800');
-  calculatorCard.classList.add('glass-effect-light', 'border-gray-200');
-  statsSection.classList.replace('bg-gray-900/50', 'bg-white/50');
+        contactCard.classList.remove('glass-effect', 'border-gray-800');
+        contactCard.classList.add('glass-effect-light', 'border-gray-200');
+        calculatorCard.classList.remove('glass-effect', 'border-gray-800');
+        calculatorCard.classList.add('glass-effect-light', 'border-gray-200');
+        statsSection.classList.replace('bg-gray-900/50', 'bg-white/50');
 
-  // 💡 Исправляем калькулятор
-  document.querySelectorAll('#calculator select, #calculator input').forEach(el => {
-    el.classList.remove('bg-gray-800', 'border-gray-700', 'text-gray-100');
-    el.classList.add('bg-white', 'border-gray-300', 'text-gray-900');
-  });
-  toAmount.classList.remove('bg-gray-900', 'border-gray-700', 'text-teal-400');
-  toAmount.classList.add('bg-gray-100', 'border-gray-300', 'text-teal-600');
+        document.querySelectorAll('#calculator select, #calculator input').forEach(el => {
+          el.classList.remove('bg-gray-800', 'border-gray-700', 'text-gray-100');
+          el.classList.add('bg-white', 'border-gray-300', 'text-gray-900');
+        });
+        toAmount.classList.remove('bg-gray-900', 'border-gray-700', 'text-teal-400');
+        toAmount.classList.add('bg-gray-100', 'border-gray-300', 'text-teal-600');
 
-  cards.forEach(c => {
-    c.classList.replace('bg-gray-900', 'bg-white');
-    c.classList.replace('border-gray-800', 'border-gray-200');
-    c.classList.replace('hover:border-teal-400', 'hover:border-teal-600');
-  });
-} else {
-  // 🌙 Dark Theme
-  toggleBg.classList.replace('bg-gray-300', 'bg-gray-700');
-  toggleCircle.style.transform = 'translateX(0)';
-  lightLabel.classList.add('hidden');
-  darkLabel.classList.remove('hidden');
-  darkLabel.classList.add('text-teal-400', 'font-semibold');
+        cards.forEach(c => {
+          c.classList.replace('bg-gray-900', 'bg-white');
+          c.classList.replace('border-gray-800', 'border-gray-200');
+          c.classList.replace('hover:border-teal-400', 'hover:border-teal-600');
+        });
 
-  body.classList.replace('bg-gray-50', 'bg-gray-950');
-  body.classList.replace('text-gray-900', 'text-gray-100');
-  navbar.classList.replace('border-gray-200', 'border-gray-800');
-  navbar.classList.replace('bg-gray-50/90', 'bg-gray-950/90');
-  heroSection.classList.remove('hero-gradient-light');
-  heroSection.classList.add('hero-gradient');
-  footer.classList.replace('border-gray-200', 'border-gray-800');
+        document.querySelectorAll('.review-card').forEach(card => {
+          card.classList.remove('bg-gray-900/60', 'border-gray-700');
+          card.classList.add('bg-white', 'border-gray-200');
+        });
+        document.querySelectorAll('.review-name').forEach(name => {
+          name.classList.remove('text-white');
+          name.classList.add('text-gray-900');
+        });
+        document.querySelectorAll('.review-text').forEach(text => {
+          text.classList.remove('text-gray-300');
+          text.classList.add('text-gray-700');
+        });
+      } else {
+        toggleBg.classList.replace('bg-gray-300', 'bg-gray-700');
+        toggleCircle.style.transform = 'translateX(0)';
+        lightLabel.classList.add('hidden');
+        darkLabel.classList.remove('hidden');
+        darkLabel.classList.add('text-teal-400', 'font-semibold');
 
-  contactCard.classList.remove('glass-effect-light', 'border-gray-200');
-  contactCard.classList.add('glass-effect', 'border-gray-800');
-  calculatorCard.classList.remove('glass-effect-light', 'border-gray-200');
-  calculatorCard.classList.add('glass-effect', 'border-gray-800');
-  statsSection.classList.replace('bg-white/50', 'bg-gray-900/50');
+        body.classList.replace('bg-gray-50', 'bg-gray-950');
+        body.classList.replace('text-gray-900', 'text-gray-100');
+        navbar.classList.replace('border-gray-200', 'border-gray-800');
+        navbar.classList.replace('bg-gray-50/90', 'bg-gray-950/90');
+        heroSection.classList.remove('hero-gradient-light');
+        heroSection.classList.add('hero-gradient');
+        footer.classList.replace('border-gray-200', 'border-gray-800');
 
-  // 💡 Возвращаем цвета калькулятора
-  document.querySelectorAll('#calculator select, #calculator input').forEach(el => {
-    el.classList.remove('bg-white', 'border-gray-300', 'text-gray-900');
-    el.classList.add('bg-gray-800', 'border-gray-700', 'text-gray-100');
-  });
-  toAmount.classList.remove('bg-gray-100', 'border-gray-300', 'text-teal-600');
-  toAmount.classList.add('bg-gray-900', 'border-gray-700', 'text-teal-400');
+        contactCard.classList.remove('glass-effect-light', 'border-gray-200');
+        contactCard.classList.add('glass-effect', 'border-gray-800');
+        calculatorCard.classList.remove('glass-effect-light', 'border-gray-200');
+        calculatorCard.classList.add('glass-effect', 'border-gray-800');
+        statsSection.classList.replace('bg-white/50', 'bg-gray-900/50');
 
-  cards.forEach(c => {
-    c.classList.replace('bg-white', 'bg-gray-900');
-    c.classList.replace('border-gray-200', 'border-gray-800');
-    c.classList.replace('hover:border-teal-600', 'hover:border-teal-400');
-  });
-}
-  });
-</script>
+        document.querySelectorAll('#calculator select, #calculator input').forEach(el => {
+          el.classList.remove('bg-white', 'border-gray-300', 'text-gray-900');
+          el.classList.add('bg-gray-800', 'border-gray-700', 'text-gray-100');
+        });
+        toAmount.classList.remove('bg-gray-100', 'border-gray-300', 'text-teal-600');
+        toAmount.classList.add('bg-gray-900', 'border-gray-700', 'text-teal-400');
+
+        cards.forEach(c => {
+          c.classList.replace('bg-white', 'bg-gray-900');
+          c.classList.replace('border-gray-200', 'border-gray-800');
+          c.classList.replace('hover:border-teal-600', 'hover:border-teal-400');
+        });
+
+        document.querySelectorAll('.review-card').forEach(card => {
+          card.classList.remove('bg-white', 'border-gray-200');
+          card.classList.add('bg-gray-900/60', 'border-gray-700');
+        });
+        document.querySelectorAll('.review-name').forEach(name => {
+          name.classList.remove('text-gray-900');
+          name.classList.add('text-white');
+        });
+        document.querySelectorAll('.review-text').forEach(text => {
+          text.classList.remove('text-gray-700');
+          text.classList.add('text-gray-300');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
