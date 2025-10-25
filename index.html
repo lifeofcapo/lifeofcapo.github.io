@@ -8,15 +8,9 @@
   <link rel="icon" type="image/x-icon" href="./images/icons/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./images/icons/favicon-16x16.png">
-  
-  <!-- Для Apple устройств -->
   <link rel="apple-touch-icon" sizes="180x180" href="./images/icons/apple-touch-icon.png">
-  
-  <!-- Для Android -->
   <link rel="icon" type="image/png" sizes="192x192" href="./images/icons/android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="./images/icons/android-chrome-512x512.png">
-  
-  <!-- Web App Manifest -->
   <link rel="manifest" href="./images/icons/site.webmanifest">
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -111,6 +105,7 @@
         text-align: center;
       }
     }
+    
   </style>
 </head>
 <body id="body" class="transition-theme bg-gray-950 text-gray-100 min-h-screen">
@@ -280,8 +275,8 @@
         <p class="text-sm text-gray-500 mt-2">Для обмена больших сумм звоните — курс будет выгоднее</p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto" id="currencyGrid">
-      </div>
+<div class="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto" id="currencyGrid">
+</div>
     </div>
   </section>
 
@@ -305,6 +300,47 @@
       </div>
     </div>
   </div>
+
+<section class="py-16 transition-theme bg-gray-900/50" id="advantages">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-100">Наши преимущества</h2>
+      <p class="text-gray-400 text-lg">Почему сотрудничество с нами выгодно и надежно</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="flex flex-col items-center text-center p-6 bg-gray-900 rounded-2xl shadow-xl border border-gray-800 hover:border-teal-400 transition-all hover:scale-105 cursor-pointer">
+        <div class="text-teal-400 text-4xl mb-4">🛎️</div>
+        <h3 class="font-semibold text-xl mb-2 text-gray-100">Поддержка 24/7</h3>
+        <p class="text-gray-400">Наши специалисты доступны в любое время для решения любых вопросов и помощи клиентам.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center p-6 bg-gray-900 rounded-2xl shadow-xl border border-gray-800 hover:border-teal-400 transition-all hover:scale-105 cursor-pointer">
+        <div class="text-teal-400 text-4xl mb-4">💡</div>
+        <h3 class="font-semibold text-xl mb-2 text-gray-100">Выгодные условия</h3>
+        <p class="text-gray-400">Если вы найдете более выгодное предложение на рынке — мы предложим вам лучшие условия и бонусы.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center p-6 bg-gray-900 rounded-2xl shadow-xl border border-gray-800 hover:border-teal-400 transition-all hover:scale-105 cursor-pointer">
+        <div class="text-teal-400 text-4xl mb-4">🛡️</div>
+        <h3 class="font-semibold text-xl mb-2 text-gray-100">Надёжный партнёр</h3>
+        <p class="text-gray-400">20 лет на рынке, более 1000 положительных отзывов и постоянные клиенты, доверяющие нам свои сделки.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center p-6 bg-gray-900 rounded-2xl shadow-xl border border-gray-800 hover:border-teal-400 transition-all hover:scale-105 cursor-pointer">
+        <div class="text-teal-400 text-4xl mb-4">💰</div>
+        <h3 class="font-semibold text-xl mb-2 text-gray-100">Выгодные ставки</h3>
+        <p class="text-gray-400">Мы тщательно проверяем и предлагаем самые привлекательные финансовые ставки на рынке.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center p-6 bg-gray-900 rounded-2xl shadow-xl border border-gray-800 hover:border-teal-400 transition-all hover:scale-105 cursor-pointer">
+        <div class="text-teal-400 text-4xl mb-4">🤝</div>
+        <h3 class="font-semibold text-xl mb-2 text-gray-100">Реферальная программа</h3>
+        <p class="text-gray-400">Приглашайте друзей и коллег, пусть они упоминают вас, и получайте бонусы за будущие сделки.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
   <section class="py-16 transition-theme" id="contact">
     <div class="container mx-auto px-6">
@@ -369,7 +405,7 @@
         
         <div class="review-card p-6 bg-gray-900/60 border border-gray-700 rounded-2xl shadow-2xl transition-theme">
           <div class="flex items-center gap-4 mb-3">
-            <img src="https://avatars.mds.yandex.net/get-yapic/0/0-0/islands-retina-50" alt="avatar" class="w-12 h-12 rounded-full object-cover">
+            <img src="https://avatars.mds.yandex.net/get-yapic/65952/0d-6/orig" alt="avatar" class="w-12 h-12 rounded-full object-cover">
             <div>
               <div class="font-semibold review-name">Даня Рогачёв</div>
               <div class="text-sm text-gray-400">22 июня</div>
@@ -383,7 +419,7 @@
 
         <div class="review-card p-6 bg-gray-900/60 border border-gray-700 rounded-2xl shadow-2xl transition-theme">
           <div class="flex items-center gap-4 mb-3">
-            <img src="https://avatars.mds.yandex.net/get-yapic/0/0-0/islands-retina-50" alt="avatar" class="w-12 h-12 rounded-full object-cover">
+            <img src="https://avatars.mds.yandex.net/get-yapic/31804/0m-7/orig" alt="avatar" class="w-12 h-12 rounded-full object-cover">
             <div>
               <div class="font-semibold review-name">Анастасия Блинникова</div>
               <div class="text-sm text-gray-400">15 июня</div>
@@ -397,7 +433,7 @@
 
         <div class="review-card p-6 bg-gray-900/60 border border-gray-700 rounded-2xl shadow-2xl transition-theme">
           <div class="flex items-center gap-4 mb-3">
-            <img src="https://avatars.mds.yandex.net/get-yapic/0/0-0/islands-retina-50" alt="avatar" class="w-12 h-12 rounded-full object-cover">
+            <img src="https://avatars.mds.yandex.net/get-yapic/26311/0h-4/orig" alt="avatar" class="w-12 h-12 rounded-full object-cover">
             <div>
               <div class="font-semibold review-name">Матвей Шалагин</div>
               <div class="text-sm text-gray-400">28 марта</div>
@@ -411,7 +447,7 @@
 
         <div class="review-card p-6 bg-gray-900/60 border border-gray-700 rounded-2xl shadow-2xl transition-theme">
           <div class="flex items-center gap-4 mb-3">
-            <img src="https://avatars.mds.yandex.net/get-yapic/0/0-0/islands-retina-50" alt="avatar" class="w-12 h-12 rounded-full object-cover">
+            <img src="https://avatars.mds.yandex.net/get-yapic/27503/0d-7/orig" alt="avatar" class="w-12 h-12 rounded-full object-cover">
             <div>
               <div class="font-semibold review-name">Дима Прока</div>
               <div class="text-sm text-gray-400">27 марта</div>
@@ -425,7 +461,7 @@
 
         <div class="review-card p-6 bg-gray-900/60 border border-gray-700 rounded-2xl shadow-2xl transition-theme">
           <div class="flex items-center gap-4 mb-3">
-            <img src="https://avatars.mds.yandex.net/get-yapic/0/0-0/islands-retina-50" alt="avatar" class="w-12 h-12 rounded-full object-cover">
+            <img src="https://avatars.mds.yandex.net/get-yapic/60687/8UvGHsAxiKkqOAO6heB6gt1IIU-1/orig" alt="avatar" class="w-12 h-12 rounded-full object-cover">
             <div>
               <div class="font-semibold review-name">викА</div>
               <div class="text-sm text-gray-400">7 октября</div>
@@ -439,7 +475,7 @@
 
         <div class="review-card p-6 bg-gray-900/60 border border-gray-700 rounded-2xl shadow-2xl transition-theme">
           <div class="flex items-center gap-4 mb-3">
-            <img src="https://avatars.mds.yandex.net/get-yapic/0/0-0/islands-retina-50" alt="avatar" class="w-12 h-12 rounded-full object-cover">
+            <img src="https://avatars.mds.yandex.net/get-yapic/43473/dSCzRUJqLweK9SBBMtyHquiNY-1/orig" alt="avatar" class="w-12 h-12 rounded-full object-cover">
             <div>
               <div class="font-semibold review-name">Николай макаров</div>
               <div class="text-sm text-gray-400">23 апреля</div>
@@ -453,7 +489,7 @@
 
         <div class="review-card p-6 bg-gray-900/60 border border-gray-700 rounded-2xl shadow-2xl transition-theme">
           <div class="flex items-center gap-4 mb-3">
-            <img src="https://avatars.mds.yandex.net/get-yapic/0/0-0/islands-retina-50" alt="avatar" class="w-12 h-12 rounded-full object-cover">
+            <img src="https://avatars.mds.yandex.net/get-yapic/31078/0o-4/orig" alt="avatar" class="w-12 h-12 rounded-full object-cover">
             <div>
               <div class="font-semibold review-name">Lyu@125</div>
               <div class="text-sm text-gray-400">19 мая</div>
@@ -462,6 +498,20 @@
           <div class="text-yellow-400 mb-2">★★★★★</div>
           <p class="review-text text-gray-300">
             Операционная касса супер, выгодный курс, вежливый персонал который поможет во всем, все на самом высоком уровне
+          </p>
+        </div>
+
+        <div class="review-card p-6 bg-gray-900/60 border border-gray-700 rounded-2xl shadow-2xl transition-theme">
+          <div class="flex items-center gap-4 mb-3">
+            <img src="https://avatars.mds.yandex.net/get-yapic/68143/0g-8/orig" alt="avatar" class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <div class="font-semibold review-name">Денис Солонин</div>
+              <div class="text-sm text-gray-400">20 апреля</div>
+            </div>
+          </div>
+          <div class="text-yellow-400 mb-2">★★★★★</div>
+          <p class="review-text text-gray-300">
+            Быстрое обслуживание. Вежливый персонал, все подробно объяснят если что-то не понятно. В зале ожидания чисто. 
           </p>
         </div>
 
@@ -477,271 +527,44 @@
     </div>
   </section>
 
+<section class="py-16 transition-theme bg-gray-900/50" id="partners">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-100">
+        Зарабатывай вместе с Операционной кассой!
+      </h2>
+      <p class="text-gray-400 text-lg">
+        Участвуй в партнёрской программе и получай процент с каждой сделки.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="flex flex-col items-center text-center p-6 bg-gray-900 rounded-2xl shadow-xl border border-gray-800 hover:border-teal-400 transition-all hover:scale-105 cursor-pointer">
+        <div class="text-teal-400 text-4xl mb-4">👤</div>
+        <h3 class="font-semibold text-xl mb-2 text-gray-100">Приведи клиента</h3>
+        <p class="text-gray-400">Приведи человека, который хочет обменять валюту или совершить финансовую операцию.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center p-6 bg-gray-900 rounded-2xl shadow-xl border border-gray-800 hover:border-teal-400 transition-all hover:scale-105 cursor-pointer">
+        <div class="text-teal-400 text-4xl mb-4">💹</div>
+        <h3 class="font-semibold text-xl mb-2 text-gray-100">Наше предложение</h3>
+        <p class="text-gray-400">Мы предоставляем специальное предложение, а вы устанавливаете свою дельту для клиента.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center p-6 bg-gray-900 rounded-2xl shadow-xl border border-gray-800 hover:border-teal-400 transition-all hover:scale-105 cursor-pointer">
+        <div class="text-teal-400 text-4xl mb-4">💵</div>
+        <h3 class="font-semibold text-xl mb-2 text-gray-100">Получение прибыли</h3>
+        <p class="text-gray-400">Вы забираете разницу после сделки в кассе или на карту любого банка.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
   <footer class="py-8 border-t border-gray-800 transition-theme" id="footer">
     <div class="container mx-auto px-6 text-center text-gray-500">
       <p class="mb-2">© 2025 Опер-касса.рф — Обмен валют в Москве</p>
     </div>
   </footer>
-
-  <script>
-    const currencies = [
-      { code: 'USD_WHITE', flag: 'us', name: 'Доллар США (белый)', buy: 95.5, sell: 97.8, showRates: true },
-      { code: 'USD_BLUE', flag: 'us', name: 'Доллар США (синий)', buy: 94.0, sell: 96.5, showRates: true },
-      { code: 'EUR', flag: 'eu', name: 'Евро', buy: 105.2, sell: 107.9, showRates: true },
-      { code: 'GBP', flag: 'gb', name: 'Фунт стерлингов', buy: 0, sell: 0, showRates: false },
-      { code: 'CNY', flag: 'cn', name: 'Китайский юань', buy: 0, sell: 0, showRates: false },
-      { code: 'RUB', flag: 'ru', name: 'Российский рубль', buy: 1, sell: 1, showRates: true }
-    ];
-
-    const grid = document.getElementById('currencyGrid');
-    currencies.filter(c => c.code !== 'RUB').forEach(({ code, flag, name, buy, sell, showRates }) => {
-      const card = document.createElement('div');
-      card.className = 'currency-card bg-gray-900 rounded-2xl p-6 shadow-xl border border-gray-800 hover:border-teal-400 transition-all hover:scale-105 cursor-pointer slide-in';
-      
-      if (showRates) {
-        card.innerHTML = `
-          <div class="flex items-center justify-between mb-4">
-            <div class="flex items-center gap-3">
-              <img src="https://flagcdn.com/w40/${flag}.png" alt="${code}" class="w-10 h-8 rounded shadow-sm" />
-              <div>
-                <h3 class="text-2xl font-bold">${name.includes('белый') ? 'USD' : name.includes('синий') ? 'USD' : code}</h3>
-                <p class="text-xs text-gray-500">${name}</p>
-              </div>
-            </div>
-          </div>
-          <div class="space-y-3">
-            <div class="flex justify-between items-center">
-              <span class="text-gray-400">Покупка</span>
-              <span class="text-2xl font-bold text-green-400">${buy.toFixed(2)} ₽</span>
-            </div>
-            <div class="flex justify-between items-center">
-              <span class="text-gray-400">Продажа</span>
-              <span class="text-2xl font-bold text-red-400">${sell.toFixed(2)} ₽</span>
-            </div>
-          </div>`;
-      } else {
-        card.innerHTML = `
-          <div class="flex items-center justify-between mb-4">
-            <div class="flex items-center gap-3">
-              <img src="https://flagcdn.com/w40/${flag}.png" alt="${code}" class="w-10 h-8 rounded shadow-sm" />
-              <div>
-                <h3 class="text-2xl font-bold">${code}</h3>
-                <p class="text-xs text-gray-500">${name}</p>
-              </div>
-            </div>
-          </div>
-          <div class="space-y-3">
-            <div class="text-center py-4">
-              <p class="text-gray-400 mb-2">📞 Курс уточняйте по телефону</p>
-              <a href="tel:+79616269999" class="text-teal-400 hover:text-teal-300 font-semibold text-lg">+7 (961) 626-99-99</a>
-            </div>
-          </div>`;
-      }
-      
-      grid.appendChild(card);
-    });
-
-    function animateCounter(element) {
-      const target = parseInt(element.getAttribute('data-target'));
-      const duration = 2000;
-      const step = target / (duration / 16);
-      let current = 0;
-
-      const timer = setInterval(() => {
-        current += step;
-        if (current >= target) {
-          element.textContent = target.toLocaleString('ru-RU');
-          clearInterval(timer);
-        } else {
-          element.textContent = Math.floor(current).toLocaleString('ru-RU');
-        }
-      }, 16);
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const counters = document.querySelectorAll('[data-target]');
-          counters.forEach(counter => animateCounter(counter));
-          observer.disconnect();
-        }
-      });
-    });
-
-    observer.observe(document.getElementById('statsSection'));
-
-    const fromAmount = document.getElementById('fromAmount');
-    const fromCurrency = document.getElementById('fromCurrency');
-    const toCurrency = document.getElementById('toCurrency');
-    const toAmount = document.getElementById('toAmount');
-
-    function calculateExchange() {
-      const amount = parseFloat(fromAmount.value) || 0;
-      const from = fromCurrency.value;
-      const to = toCurrency.value;
-
-      if (amount === 0) {
-        toAmount.textContent = '~';
-        return;
-      }
-
-      const fromRate = currencies.find(c => c.code === from)?.sell || 1;
-      const toRate = currencies.find(c => c.code === to)?.buy || 1;
-
-      let result;
-      if (from === 'RUB') {
-        result = amount / toRate;
-      } else if (to === 'RUB') {
-        result = amount * fromRate;
-      } else {
-        const inRub = amount * fromRate;
-        result = inRub / toRate;
-      }
-
-      toAmount.textContent = result.toFixed(2) + ' ' + to;
-    }
-
-    fromAmount.addEventListener('input', calculateExchange);
-    fromCurrency.addEventListener('change', calculateExchange);
-    toCurrency.addEventListener('change', calculateExchange);
-    calculateExchange();
-
-    function openQuickOrder() {
-      const modal = document.getElementById('quickOrderModal');
-      modal.classList.add('show');
-    }
-
-    function closeQuickOrder() {
-      const modal = document.getElementById('quickOrderModal');
-      modal.classList.remove('show');
-    }
-
-    function submitOrder() {
-      alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время.');
-      closeQuickOrder();
-    }
-
-    window.onclick = function(event) {
-      const modal = document.getElementById('quickOrderModal');
-      if (event.target === modal) {
-        closeQuickOrder();
-      }
-    }
-
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    const toggle = document.getElementById('themeToggle');
-    const toggleBg = document.getElementById('toggleBg');
-    const toggleCircle = document.getElementById('toggleCircle');
-    const darkLabel = document.getElementById('darkLabel');
-    const lightLabel = document.getElementById('lightLabel');
-    
-    toggle.addEventListener('change', () => {
-      const body = document.getElementById('body');
-      const navbar = document.getElementById('navbar');
-      const heroSection = document.getElementById('heroSection');
-      const contactCard = document.getElementById('contactCard');
-      const calculatorCard = document.getElementById('calculatorCard');
-      const footer = document.getElementById('footer');
-      const cards = document.querySelectorAll('.currency-card');
-      const statsSection = document.getElementById('statsSection');
-
-      if (toggle.checked) {
-        toggleBg.classList.replace('bg-gray-700', 'bg-gray-300');
-        toggleCircle.style.transform = 'translateX(24px)';
-        darkLabel.classList.add('hidden');
-        lightLabel.classList.remove('hidden');
-        lightLabel.classList.add('text-teal-600', 'font-semibold');
-
-        body.classList.replace('bg-gray-950', 'bg-gray-50');
-        body.classList.replace('text-gray-100', 'text-gray-900');
-        navbar.classList.replace('border-gray-800', 'border-gray-200');
-        navbar.classList.replace('bg-gray-950/90', 'bg-gray-50/90');
-        heroSection.classList.remove('hero-gradient');
-        heroSection.classList.add('hero-gradient-light');
-        footer.classList.replace('border-gray-800', 'border-gray-200');
-
-        contactCard.classList.remove('glass-effect', 'border-gray-800');
-        contactCard.classList.add('glass-effect-light', 'border-gray-200');
-        calculatorCard.classList.remove('glass-effect', 'border-gray-800');
-        calculatorCard.classList.add('glass-effect-light', 'border-gray-200');
-        statsSection.classList.replace('bg-gray-900/50', 'bg-white/50');
-
-        document.querySelectorAll('#calculator select, #calculator input').forEach(el => {
-          el.classList.remove('bg-gray-800', 'border-gray-700', 'text-gray-100');
-          el.classList.add('bg-white', 'border-gray-300', 'text-gray-900');
-        });
-        toAmount.classList.remove('bg-gray-900', 'border-gray-700', 'text-teal-400');
-        toAmount.classList.add('bg-gray-100', 'border-gray-300', 'text-teal-600');
-
-        cards.forEach(c => {
-          c.classList.replace('bg-gray-900', 'bg-white');
-          c.classList.replace('border-gray-800', 'border-gray-200');
-          c.classList.replace('hover:border-teal-400', 'hover:border-teal-600');
-        });
-
-        document.querySelectorAll('.review-card').forEach(card => {
-          card.classList.remove('bg-gray-900/60', 'border-gray-700');
-          card.classList.add('bg-white', 'border-gray-200');
-        });
-        document.querySelectorAll('.review-name').forEach(name => {
-          name.classList.remove('text-white');
-          name.classList.add('text-gray-900');
-        });
-        document.querySelectorAll('.review-text').forEach(text => {
-          text.classList.remove('text-gray-300');
-          text.classList.add('text-gray-700');
-        });
-      } else {
-        toggleBg.classList.replace('bg-gray-300', 'bg-gray-700');
-        toggleCircle.style.transform = 'translateX(0)';
-        lightLabel.classList.add('hidden');
-        darkLabel.classList.remove('hidden');
-        darkLabel.classList.add('text-teal-400', 'font-semibold');
-
-        body.classList.replace('bg-gray-50', 'bg-gray-950');
-        body.classList.replace('text-gray-900', 'text-gray-100');
-        navbar.classList.replace('border-gray-200', 'border-gray-800');
-        navbar.classList.replace('bg-gray-50/90', 'bg-gray-950/90');
-        heroSection.classList.remove('hero-gradient-light');
-        heroSection.classList.add('hero-gradient');
-        footer.classList.replace('border-gray-200', 'border-gray-800');
-
-        contactCard.classList.remove('glass-effect-light', 'border-gray-200');
-        contactCard.classList.add('glass-effect', 'border-gray-800');
-        calculatorCard.classList.remove('glass-effect-light', 'border-gray-200');
-        calculatorCard.classList.add('glass-effect', 'border-gray-800');
-        statsSection.classList.replace('bg-white/50', 'bg-gray-900/50');
-
-        document.querySelectorAll('#calculator select, #calculator input').forEach(el => {
-          el.classList.remove('bg-white', 'border-gray-300', 'text-gray-900');
-          el.classList.add('bg-gray-800', 'border-gray-700', 'text-gray-100');
-        });
-        toAmount.classList.remove('bg-gray-100', 'border-gray-300', 'text-teal-600');
-        toAmount.classList.add('bg-gray-900', 'border-gray-700', 'text-teal-400');
-
-        cards.forEach(c => {
-          c.classList.replace('bg-white', 'bg-gray-900');
-          c.classList.replace('border-gray-200', 'border-gray-800');
-          c.classList.replace('hover:border-teal-600', 'hover:border-teal-400');
-        });
-
-        document.querySelectorAll('.review-card').forEach(card => {
-          card.classList.remove('bg-white', 'border-gray-200');
-          card.classList.add('bg-gray-900/60', 'border-gray-700');
-        });
-        document.querySelectorAll('.review-name').forEach(name => {
-          name.classList.remove('text-gray-900');
-          name.classList.add('text-white');
-        });
-        document.querySelectorAll('.review-text').forEach(text => {
-          text.classList.remove('text-gray-700');
-          text.classList.add('text-gray-300');
-        });
-      }
-    });
-  </script>
+  <script defer src="./js/javascript.js"></script>
 </body>
 </html>
