@@ -196,3 +196,51 @@ loadI18n().then(() => {
   fetchGitHubRepos();
   fetchGitHubActivity();
 });
+
+(function initMobileMenu() {
+  const navToggle = document.getElementById('navToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  
+  if (!navToggle || !mobileMenu) return;
+  
+
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+  
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.classList.remove('active');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+  
+  document.addEventListener('click', (e) => {
+    if (mobileMenu.classList.contains('open') && 
+        !mobileMenu.contains(e.target) && 
+        !navToggle.contains(e.target)) {
+      navToggle.classList.remove('active');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+  
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900 && mobileMenu.classList.contains('open')) {
+      navToggle.classList.remove('active');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+  
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+      navToggle.classList.remove('active');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+})();
