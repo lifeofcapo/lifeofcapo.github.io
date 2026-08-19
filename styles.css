@@ -623,8 +623,8 @@ footer > *{
     align-items: center;
   }
 
-  .masthead-nav {
-    display: none;
+  nav.masthead-nav {
+    display: none !important;
   }
   
   .nav-toggle {
