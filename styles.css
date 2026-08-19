@@ -549,7 +549,6 @@ footer > *{
 }
 
 .mobile-menu {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -563,10 +562,15 @@ footer > *{
   transform: translateX(100%);
   transition: transform 0.3s ease;
   overflow-y: auto;
+  display: flex;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .mobile-menu.open {
   transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .mobile-menu a {
@@ -648,13 +652,8 @@ footer > *{
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
   
-  .mobile-menu {
-    display: flex;
-  }
-
   .lang-switch{
     flex-shrink:0;
-    margin-left: auto;
   }
   .lang-switch button{padding:4px 7px;font-size:10px;}
 
@@ -709,4 +708,3 @@ footer > *{
   .hero h1{font-size:clamp(48px,17vw,72px);}
   .activity-grid{grid-template-columns:repeat(13,minmax(0,1fr));}
 }
-
